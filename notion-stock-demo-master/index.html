@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notion Stock Widget</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark">
+    <!-- Light/Dark Btn -->
+    <div class="settings">
+      <div class="modes">
+        <button class="light">Light</button>
+        <button class="dark">Dark</button>
+      </div>
+    </div>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright"><a href="https://cn.tradingview.com/markets/currencies/forex-cross-rates/" rel="noopener" target="_blank"><span class="blue-text">汇率</span></a>由TradingView提供</div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+      {
+      "width": 770,
+      "height": 400,
+      "currencies": [
+        "EUR",
+        "USD",
+        "JPY",
+        "GBP",
+        "AUD",
+        "CNY",
+        "HKD",
+        "TWD"
+      ],
+      "isTransparent": false,
+      "colorTheme": "light",
+      "locale": "zh_CN"
+    }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <!-- Custom JS for widget styling BEGIN -->
+    <script src="app.js"></script>
+    <!-- Custom JS END -->
+  </body>
+</html>
